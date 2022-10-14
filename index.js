@@ -76,15 +76,6 @@ const sprites = {
     visible: true,
     layerOrder: 4
   }),
-  Taxes: new Taxes({
-    x: 191,
-    y: 134,
-    direction: 90,
-    costumeNumber: 1,
-    size: 100,
-    visible: true,
-    layerOrder: 6
-  }),
   Sprite1: new Sprite1({
     x: -158,
     y: -42,
