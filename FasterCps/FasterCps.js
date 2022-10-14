@@ -5,7 +5,6 @@ import {
   Trigger,
   Watcher,
   Costume,
-  Color,
   Sound
 } from "https://unpkg.com/leopard@^1/dist/index.esm.js";
 
@@ -50,10 +49,11 @@ export default class FasterCps extends Sprite {
     while (true) {
       if (
         this.stage.vars.apples > this.vars.price3 &&
-        this.touching("mouse") && this.mouse.down
+        this.touching("mouse") &&
+        this.mouse.down
       ) {
-        this.stage.vars.apples += this.vars.price3 * -1;
-        this.stage.vars.cpsSpeed += (this.stage.vars.cpsSpeed / 9) * -1;
+        this.stage.vars.apples -= this.vars.price3;
+        this.stage.vars.cpsSpeed -= this.stage.vars.cpsSpeed / 9;
         this.vars.price3 += Math.round(this.vars.price3 * 0.5);
       }
       yield;
