@@ -2,10 +2,8 @@
 
 import {
   Stage as StageBase,
-  Trigger,
   Watcher,
   Costume,
-  Color,
   Sound
 } from "https://unpkg.com/leopard@^1/dist/index.esm.js";
 
@@ -45,7 +43,7 @@ export default class Stage extends StageBase {
     });
     this.watchers.HighestScore = new Watcher({
       label: "☁ highest score",
-      style: "normal",
+      style: "good",
       visible: true,
       value: () => this.vars.HighestScore,
       x: 311,
