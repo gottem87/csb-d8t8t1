@@ -5,7 +5,6 @@ import {
   Trigger,
   Watcher,
   Costume,
-  Color,
   Sound
 } from "https://unpkg.com/leopard@^1/dist/index.esm.js";
 
@@ -52,10 +51,10 @@ export default class MoreCpc extends Sprite {
     while (true) {
       if (
         this.stage.vars.apples > this.vars.price &&
-        this.touching("mouse") && this.mouse.down
+        this.touching("mouse") &&
+        this.mouse.down
       ) {
-        this.stage.vars.apples += this.vars.price * -1;
-        this.stage.vars.cpc += this.random(10, 500);
+        this.stage.vars.cpc += 10;
         this.vars.price += Math.round(this.vars.price * 0.5);
       }
       yield;
